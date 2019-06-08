@@ -19,7 +19,7 @@ def get_japanese_emoticon(path, westEmoji)
   match = "Sorry, that emoticon was not found"
 
   dictionary["get_emoticon"].each do |west, japan|
-    #only set the match output if the emoji is found 
+    #only set the match output if the emoji is found
     if west == westEmoji
       match = japan
     end
@@ -34,11 +34,11 @@ def get_english_meaning(path, japanese_emoticon)
   match = "Sorry, that emoticon was not found"
 
   dictionary["get_meaning"].each do |japan, meaning|
-    #only set the match output if the emoji is found 
+    #only set the match output if the emoji is found
     if japan == japanese_emoticon
       match = meaning
     end
   end
   match
-  
+
 end
