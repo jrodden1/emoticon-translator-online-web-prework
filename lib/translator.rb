@@ -10,7 +10,6 @@ def load_library(path)
     libHash[:get_meaning][emojiArr[1]] = meaning
     libHash[:get_emoticon][emojiArr[0]] = emojiArr[1]
   end
-  binding.pry
   libHash
 end
 
