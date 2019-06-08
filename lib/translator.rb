@@ -14,8 +14,15 @@ def load_library(path)
 end
 
 def get_japanese_emoticon(path, westEmoji)
+  dictionary = load_library(path)
+  match = ""
 
-  
+  dictionary["get_emoticon"].each do |west, japan|
+    if west == westEmoji
+      match = japan
+    end
+  end
+  match
 end
 
 def get_english_meaning
