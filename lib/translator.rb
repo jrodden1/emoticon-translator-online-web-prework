@@ -5,7 +5,7 @@ require "yaml"
 def load_library(path)
   library = YAML.load_file(path)
 
-  libHash = {:get_meaning => {}, :get_emoticon => {}}
+  libHash = {:get_emoticon => {}, :get_meaning => {}}
   library.each do |meaning, emojiArr|
     libHash[:get_meaning][emojiArr[1]] = meaning
     libHash[:get_emoticon][emojiArr[0]] = emojiArr[1]
