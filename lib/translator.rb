@@ -13,8 +13,9 @@ def load_library(path)
   libHash
 end
 
-def get_japanese_emoticon(load_library, western)
-  # code goes here
+def get_japanese_emoticon(path, westEmoji)
+  
+  
 end
 
 def get_english_meaning
