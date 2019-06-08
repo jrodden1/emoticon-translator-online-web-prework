@@ -15,7 +15,7 @@ end
 
 def get_japanese_emoticon(path, westEmoji)
   dictionary = load_library(path)
-  #default the output to say the match was not found. 
+  #default the output to say the match was not found.
   match = "Sorry, that emoticon was not found"
 
   dictionary["get_emoticon"].each do |west, japan|
