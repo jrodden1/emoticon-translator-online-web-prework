@@ -27,6 +27,18 @@ def get_japanese_emoticon(path, westEmoji)
   match
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(path, japanese_emoticon)
+  dictionary = load_library(path)
+
+  #default the output to say the match was not found.
+  match = "Sorry, that emoticon was not found"
+
+  dictionary["get_meaning"].each do |japan, meaning|
+    #only set the match output if the emoji is found 
+    if japan == japanese_emoticon
+      match = meaning
+    end
+  end
+  match
+  
 end
